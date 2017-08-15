@@ -1,0 +1,33 @@
+[tableau]
+
+# tableauServer is the name of the Tableau server you want to work with
+tableauServer = https://your.tableau.server.u.want.to.use
+
+# tableauSite is the name of the Site in Tableau you want to work with
+tableauSite = TABLEAU_SITE_YOU_WANT_TO_USE
+
+# apiVersion is the version of the API to use for the REST calls
+# for Version 10.3 its 2.6
+# more info can be found @
+# https://onlinehelp.tableau.com/current/api/rest_api/en-us/help.htm#REST/rest_api_ref.htm
+apiVersion = 2.6
+
+# logType will help set the type of logging you want for the program
+# You can set to "debug, info, warn, error"
+# If nothing is passed it will be set to info
+logType = debug
+
+# The dataSources section captures properties that are used to change the DataSource
+# connection values like serverAddress and serverPort
+[dataSources]
+
+# newServerAddress is used to specify the new server address that will be used when the call to
+# change the DataSources connection is made, note that there is no https:// or http:// prefix
+# it's not required
+newServerAddress = address.of.tabserver.you.want.to.change.to
+
+# newPortAddress is used to specify the new port number that will be used when the call to
+# change the DataSources connection is made.
+# it's not required
+newPortAddress = port.number
+
