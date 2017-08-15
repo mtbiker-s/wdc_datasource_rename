@@ -96,24 +96,6 @@ class RenameDataSourceConnection:
 
         return authToken
 
-    # def signOutFromTableauServer(self, authToken):
-    #     """
-    #     Used to sign out from tableau server when transactions are done
-    #     :param authToken:
-    #     :return:
-    #     """
-    #
-    #     apiCallUrl = self.tableauServerUrl + 'auth/signout'
-    #     headers = {'X-tableau-auth': authToken}
-    #
-    #     req = requests.post(apiCallUrl, data=b'', headers=self.headers)
-    #
-    #
-    #     if req.status_code == 204:
-    #         self.logger.info("")
-    #         self.logger.info("Closing connection to Tableau Server " + self.tableauServer + ", site " + self.tableauSite)
-    #     else:
-    #         self.logger.error(req.json())
 
     def getSiteId(self, request):
         """
@@ -236,23 +218,6 @@ class RenameDataSourceConnection:
                 self.logger.info(
                     "Existing port number " + existingPortNumber + " is the same as the new port number " + newPortNumber)
 
-    # def login(self):
-    #     """
-    #     Provides a dictionary with a username and pass collected from user input
-    #     :return:
-    #     """
-    #
-    #     user = input("username: ")
-    #     passwd = getpass.getpass("password: ")
-    #
-    #     assert user != "", 'username cannot be blank!'
-    #     assert passwd != "", 'password cannot be blank!'
-    #
-    #     creds = {}
-    #     creds['username'] = user
-    #     creds['pass'] = passwd
-    #
-    #     return creds
 
     def main(self):
 
